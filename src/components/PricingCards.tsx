@@ -12,7 +12,7 @@ export function PricingCards({ currentPlan, signedIn = false }: { currentPlan?: 
         const btn = featured ? "btn-primary" : "btn-dark";
         return (
           <div key={p.id} className={`flex flex-col rounded-lg p-7 ${featured ? "bg-ink text-white" : "card"}`}>
-            <p className={`eyebrow ${featured ? "!text-signal" : ""}`}>{p.name}</p>
+            <p className={`eyebrow ${featured ? "!text-leaf" : ""}`}>{p.name}</p>
             <p className="mt-4 text-4xl font-medium tracking-tight">
               {p.priceUsd === null ? "Free" : `$${p.priceUsd}`}
               {p.priceUsd !== null && <span className={`ml-1 text-base font-normal ${featured ? "text-white/60" : "text-muted"}`}>/ month</span>}
@@ -20,7 +20,7 @@ export function PricingCards({ currentPlan, signedIn = false }: { currentPlan?: 
             <p className={`mt-3 text-sm ${featured ? "text-white/70" : "text-muted"}`}>{p.blurb}</p>
             <ul className="mt-6 space-y-3 text-sm">
               {p.features.map((f) => (
-                <li key={f} className="flex gap-2.5"><Check className="mt-0.5 h-4 w-4 shrink-0 text-signal" aria-hidden />{f}</li>
+                <li key={f} className="flex gap-2.5"><Check className={`mt-0.5 h-4 w-4 shrink-0 ${featured ? "text-leaf" : "text-signal"}`} aria-hidden />{f}</li>
               ))}
             </ul>
             <div className="mt-auto pt-8">

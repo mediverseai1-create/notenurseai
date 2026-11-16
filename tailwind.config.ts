@@ -5,12 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0A0A0A",
+        ink: "#033231",
         paper: "#FFFFFF",
-        mist: "#F4F3F0",
-        line: "#E3E1DC",
-        muted: "#6B6A66",
-        signal: { DEFAULT: "#EA2C00", dark: "#BF2300", soft: "#FFEDE8" },
+        mist: "#F2F5F2",
+        line: "#DCE3DC",
+        muted: "#5B6B68",
+        signal: { DEFAULT: "#4F7C4E", dark: "#3C6240", soft: "#E9F1E8" },
+        leaf: "#8DBB8A",
         ok: "#12805C",
         warn: "#B26A00",
       },

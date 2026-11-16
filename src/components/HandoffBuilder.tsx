@@ -39,7 +39,7 @@ export function HandoffBuilder({ notes }: { notes: Opt[] }) {
             {notes.map((n) => (
               <li key={n.id}>
                 <label className="flex cursor-pointer items-center gap-3 p-3 hover:bg-mist">
-                  <input type="checkbox" className="h-4 w-4 accent-[#EA2C00]" checked={sel.includes(n.id)} onChange={(e) => setSel((s) => (e.target.checked ? [...s, n.id].slice(0, 15) : s.filter((x) => x !== n.id)))} />
+                  <input type="checkbox" className="h-4 w-4 accent-[#4F7C4E]" checked={sel.includes(n.id)} onChange={(e) => setSel((s) => (e.target.checked ? [...s, n.id].slice(0, 15) : s.filter((x) => x !== n.id)))} />
                   <span className="min-w-0 flex-1 truncate text-sm">{n.title}{n.patient_label ? ` · ${n.patient_label}` : ""}</span>
                   <span className="text-xs text-muted">{new Date(n.created_at).toLocaleDateString()}</span>
                 </label>

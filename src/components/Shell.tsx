@@ -15,7 +15,7 @@ export function PageHero({ eyebrow, title, children }: { eyebrow: string; title:
   return (
     <section className="bg-ink text-white">
       <div className="container-x py-20 md:py-28">
-        <p className="eyebrow !text-signal">{eyebrow}</p>
+        <p className="eyebrow !text-leaf">{eyebrow}</p>
         <h1 className="mt-4 max-w-3xl text-4xl font-medium leading-[1.05] tracking-tight sm:text-6xl">{title}</h1>
         {children && <div className="mt-6 max-w-2xl text-lg text-white/70">{children}</div>}
       </div>
