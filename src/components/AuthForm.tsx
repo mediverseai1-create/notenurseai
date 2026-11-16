@@ -75,7 +75,7 @@ function Form({ mode }: { mode: Mode }) {
       <div className="hidden flex-col justify-between bg-ink p-12 text-white lg:flex">
         <Logo dark />
         <div>
-          <p className="eyebrow !text-leaf">NoteNurse AI</p>
+          <p className="eyebrow !text-signal">NoteNurse AI</p>
           <p className="mt-4 max-w-md text-4xl font-medium leading-tight tracking-tight">AI that documents with evidence, not assumptions.</p>
         </div>
         <p className="text-sm text-white/50">Every draft is reviewed and verified by a licensed nurse.</p>
