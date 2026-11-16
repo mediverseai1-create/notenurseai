@@ -1,10 +1,11 @@
 import Link from "next/link";
 
+/** Uses the supplied logo file unchanged. On dark backgrounds it sits on a white plate so it stays readable. */
 export function Logo({ dark = false, href = "/" }: { dark?: boolean; href?: string }) {
   return (
-    <Link href={href} className={`inline-flex items-baseline gap-1.5 text-[17px] tracking-[0.18em] ${dark ? "text-white" : "text-ink"}`} aria-label="NoteNurse AI home">
-      <span className="font-medium">NOTENURSE</span>
-      <span className="text-[11px] font-semibold tracking-[0.2em] text-signal">AI</span>
+    <Link href={href} aria-label="NoteNurse home" className={`inline-flex items-center ${dark ? "rounded-md bg-white px-3 py-1.5" : ""}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/logo.png" alt="NoteNurse" width={1230} height={328} className="h-8 w-auto sm:h-9" />
     </Link>
   );
 }

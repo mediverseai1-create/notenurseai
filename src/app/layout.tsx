@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: { default: "NoteNurse AI: AI-native nursing documentation", template: "%s | NoteNurse AI" },
   description:
     "NoteNurse AI analyzes bedside conversations, drafts source-linked nursing notes and automates handoffs for nursing organizations.",
+  icons: { icon: "/logo.png", apple: "/logo.png" },
   openGraph: { title: "NoteNurse AI", description: "The AI intelligence layer for nursing documentation.", type: "website" },
 };
 
