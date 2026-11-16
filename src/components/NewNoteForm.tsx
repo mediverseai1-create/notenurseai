@@ -90,7 +90,7 @@ export function NewNoteForm({ remaining, aiReady }: { remaining: number; aiReady
         <p className="mt-2 text-sm text-muted">{remaining} draft{remaining === 1 ? "" : "s"} remaining on your plan.</p>
       </div>
 
-      {!aiReady && <p className="rounded-md bg-signal-soft p-3 text-sm text-signal-dark">The AI provider is not configured on this deployment (GEMINI_API_KEY). Drafting is unavailable.</p>}
+      {!aiReady && <p className="rounded-md bg-signal-soft p-3 text-sm text-signal-dark">AI drafting is temporarily unavailable. Please try again shortly.</p>}
       {blocked && <p className="rounded-md bg-signal-soft p-3 text-sm text-signal-dark">You have used your allowance. <Link href="/app/billing" className="font-medium underline">Upgrade your plan</Link> to keep drafting.</p>}
 
       <div className="grid gap-4 sm:grid-cols-3">

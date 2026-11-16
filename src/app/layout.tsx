@@ -7,10 +7,10 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", displ
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: { default: "NoteNurse AI - Nursing documentation from the conversation", template: "%s | NoteNurse AI" },
+  title: { default: "NoteNurse AI: AI-native nursing documentation", template: "%s | NoteNurse AI" },
   description:
-    "NoteNurse AI turns bedside conversations into source-linked draft nursing notes that nurses review and verify before they chart.",
-  openGraph: { title: "NoteNurse AI", description: "Draft nursing notes from the conversation. Review every line against its source.", type: "website" },
+    "NoteNurse AI analyzes bedside conversations, drafts source-linked nursing notes and automates handoffs for nursing organizations.",
+  openGraph: { title: "NoteNurse AI", description: "The AI intelligence layer for nursing documentation.", type: "website" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

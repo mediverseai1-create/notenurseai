@@ -17,7 +17,7 @@ const body = z.object({
 });
 
 export async function POST(req: Request) {
-  if (!supabaseConfigured) return NextResponse.json({ error: "Backend is not configured." }, { status: 503 });
+  if (!supabaseConfigured) return NextResponse.json({ error: "Service temporarily unavailable." }, { status: 503 });
   const supabase = await createClient();
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return NextResponse.json({ error: "Please sign in." }, { status: 401 });
@@ -46,7 +46,7 @@ export async function POST(req: Request) {
   try {
     await createAdminClient().from("usage_events").insert({ user_id: auth.user.id, kind: "note" });
   } catch {
-    return NextResponse.json({ error: "Usage tracking is not configured (SUPABASE_SERVICE_ROLE_KEY)." }, { status: 503 });
+    return NextResponse.json({ error: "Usage tracking is temporarily unavailable. Please try again shortly." }, { status: 503 });
   }
 
   const { data, error } = await supabase

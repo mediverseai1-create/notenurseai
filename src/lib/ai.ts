@@ -13,7 +13,7 @@ export class AiError extends Error {
 
 async function callGemini(system: string, user: string, schema: Record<string, unknown>): Promise<unknown> {
   const key = process.env.GEMINI_API_KEY;
-  if (!key) throw new AiError("AI provider is not configured (GEMINI_API_KEY missing).", 503);
+  if (!key) throw new AiError("AI drafting is temporarily unavailable.", 503);
   const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
 

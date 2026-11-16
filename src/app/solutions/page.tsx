@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Shell, PageHero } from "@/components/Shell";
 
-export const metadata: Metadata = { title: "Solutions", description: "NoteNurse AI for bedside nurses, charge nurses and nursing students." };
+export const metadata: Metadata = { title: "Solutions", description: "NoteNurse AI for health systems, nursing leaders, home health agencies and nursing education." };
 
 const items = [
-  ["Bedside and floor nurses", "Turn a patient conversation or a quick dictated recap into a structured draft you can verify between tasks, then paste into your charting system."],
-  ["Charge nurses and team leads", "Build an I-PASS handoff from the verified notes of your shift, so the oncoming nurse gets a consistent summary."],
-  ["Home health and community nurses", "Capture visit notes from a conversation on a phone or laptop with browser dictation, with gaps flagged before you leave the visit."],
-  ["Nursing students and educators", "Practice documentation formats with a tool that shows exactly where each line came from. Educators can see why a draft is or is not supported."],
+  ["Health systems and hospitals", "Standardize nursing documentation across units. Every note carries its evidence, so quality and compliance teams can audit the record without re-interviewing staff."],
+  ["Nursing leaders and charge nurses", "Automate shift handoffs. The engine builds an I-PASS summary from verified notes, giving every oncoming team the same structure."],
+  ["Home health and community care agencies", "Capture visit documentation from a conversation on any device, with gaps flagged before the nurse leaves the visit."],
+  ["Nursing schools and training programs", "Teach documentation standards with a system that shows exactly where each line came from and why a draft is or is not supported."],
 ];
 
 export default function SolutionsPage() {
   return (
     <Shell>
-      <PageHero eyebrow="Solutions" title="Built around how nursing work actually moves.">
-        Different settings, the same principle: documentation that follows the care, with the nurse in control.
+      <PageHero eyebrow="Solutions" title="Built for the organizations that run nursing care.">
+        The same engine and the same evidence standard across every care setting.
       </PageHero>
       <section className="container-x grid gap-5 py-20 md:grid-cols-2">
         {items.map(([t, d]) => (
@@ -25,9 +25,7 @@ export default function SolutionsPage() {
           </div>
         ))}
       </section>
-      <section className="container-x pb-24">
-        <Link href="/signup" className="btn-primary">Start free trial</Link>
-      </section>
+      <section className="container-x pb-24"><Link href="/signup" className="btn-primary">Sign up</Link></section>
     </Shell>
   );
 }

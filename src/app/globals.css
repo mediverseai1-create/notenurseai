@@ -5,7 +5,7 @@
 :root { color-scheme: light; }
 html { scroll-behavior: smooth; }
 body { @apply bg-paper text-ink antialiased; font-family: var(--font-sans), system-ui, sans-serif; }
-::selection { background: #E8380D; color: #fff; }
+::selection { background: #EA2C00; color: #fff; }
 
 @layer components {
   .eyebrow { @apply text-xs font-medium uppercase tracking-eyebrow text-muted; }

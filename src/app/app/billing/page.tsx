@@ -36,7 +36,7 @@ export default async function BillingPage() {
       <div className="rounded-lg border border-line bg-paper p-5 text-sm">
         <p className="font-medium">How activation works</p>
         <p className="mt-1 text-muted">
-          Subscribe using the same email as this account (<span className="font-medium text-ink">{email}</span>). Your plan is switched on once our payment provider confirms the payment, not when you return from checkout, so it can take a few minutes. If it has not updated after an hour, contact support with your receipt.
+          Subscribe using the same email as this account (<span className="font-medium text-ink">{email}</span>). Your plan is switched on once our payment provider confirms the payment, not when you return from checkout, so it can take a few minutes. If it has not updated after an hour, sign out and back in to refresh your session.
         </p>
       </div>
 

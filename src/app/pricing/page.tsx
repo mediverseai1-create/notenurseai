@@ -2,19 +2,21 @@ import type { Metadata } from "next";
 import { Shell, PageHero } from "@/components/Shell";
 import { PricingCards } from "@/components/PricingCards";
 
-export const metadata: Metadata = { title: "Pricing", description: "Simple monthly plans for nurses. Start with five free notes." };
+export const metadata: Metadata = { title: "Pricing", description: "Predictable monthly plans for nursing teams. Evaluate with five free notes." };
 
 const faqs = [
-  ["How do I activate a paid plan?", "Create your account first, then subscribe using the same email address. Your plan is activated after the payment is confirmed by our payment provider, which is usually within minutes."],
-  ["What counts toward my note allowance?", "Each drafted note counts once, even if you later delete it. Handoffs (Pro) are not limited separately."],
-  ["Can I change or cancel my plan?", "Yes. Subscribe to a different plan to switch. Paid access runs to the end of the period you paid for, then your account returns to the trial allowance."],
+  ["How is a paid plan activated?", "Create your account first, then subscribe using the same email address. The plan is activated after our payment provider confirms the payment."],
+  ["What counts toward the monthly allowance?", "Each drafted note counts once, even if it is later deleted. Handoffs on the Pro plan are not limited separately."],
+  ["How do plan changes and cancellations work?", "Subscribe to a different plan to switch. Paid access runs to the end of the paid period, then the account returns to the trial allowance."],
   ["Is NoteNurse a medical device?", "No. It drafts documentation for a licensed nurse to review. It does not diagnose or recommend treatment."],
 ];
 
 export default function PricingPage() {
   return (
     <Shell>
-      <PageHero eyebrow="Pricing" title="Pay for the notes you draft.">Start with five free notes. Move to a monthly plan when it becomes part of your shift.</PageHero>
+      <PageHero eyebrow="Pricing" title="Pricing that scales with documentation volume.">
+        Evaluate on five encounters, then move to a monthly plan sized to your team.
+      </PageHero>
       <section className="container-x py-20"><PricingCards /></section>
       <section className="bg-mist">
         <div className="container-x py-20">

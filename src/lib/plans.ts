@@ -21,8 +21,8 @@ export const PLANS: Record<PlanId, Plan> = {
     noteLimit: 5,
     handoffs: false,
     period: "lifetime",
-    blurb: "Try the full note workflow on five encounters.",
-    features: ["5 AI-drafted notes", "SOAP, SBAR, DAR and narrative formats", "Source-linked review", "Copy and print"],
+    blurb: "Evaluate the full documentation engine on five real encounters.",
+    features: ["5 AI-drafted notes with source tracing", "SOAP, SBAR, DAR and narrative formats", "Source-linked review", "Copy and print"],
   },
   starter: {
     id: "starter",
@@ -31,13 +31,13 @@ export const PLANS: Record<PlanId, Plan> = {
     noteLimit: 150,
     handoffs: false,
     period: "month",
-    blurb: "For individual nurses documenting every shift.",
+    blurb: "For nursing teams putting AI documentation into daily operations.",
     features: [
       "150 AI-drafted notes / month",
       "All note formats",
       "Source-linked review and verification",
       "Vitals extraction and range flags",
-      "Copy, print and note history",
+      "Complete audit history of every note",
     ],
   },
   pro: {
@@ -47,13 +47,13 @@ export const PLANS: Record<PlanId, Plan> = {
     noteLimit: 600,
     handoffs: true,
     period: "month",
-    blurb: "For high-acuity units and charge nurses who run handoffs.",
+    blurb: "For high-acuity units that run shift handoffs at scale.",
     features: [
       "600 AI-drafted notes / month",
       "Everything in Starter",
       "I-PASS shift handoff builder",
-      "Usage reporting",
-      "Priority support",
+      "Usage reporting for unit leaders",
+      "Automated I-PASS handoff synthesis",
     ],
   },
 };

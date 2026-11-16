@@ -10,7 +10,7 @@ const config: Config = {
         mist: "#F4F3F0",
         line: "#E3E1DC",
         muted: "#6B6A66",
-        signal: { DEFAULT: "#E8380D", dark: "#C42E08", soft: "#FDEDE8" },
+        signal: { DEFAULT: "#EA2C00", dark: "#BF2300", soft: "#FFEDE8" },
         ok: "#12805C",
         warn: "#B26A00",
       },

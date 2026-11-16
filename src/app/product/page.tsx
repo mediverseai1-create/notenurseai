@@ -3,24 +3,24 @@ import Link from "next/link";
 import { Shell, PageHero } from "@/components/Shell";
 import { FORMATS } from "@/lib/formats";
 
-export const metadata: Metadata = { title: "Product", description: "How NoteNurse AI drafts, links and verifies nursing documentation." };
+export const metadata: Metadata = { title: "Platform", description: "The NoteNurse AI platform: capture, draft, trace and verify nursing documentation." };
 
 const modules = [
-  ["Conversation capture", "Dictate with your browser's built-in speech recognition or paste a transcript. Audio is not stored; only the text you submit is saved."],
-  ["Structured drafting", "Choose SOAP, SBAR, DAR or a shift narrative. The draft follows the format and leaves empty sections empty."],
-  ["Linked sources", "Every line cites a quote from your transcript. The quote is verified in code, and lines without a real match are flagged."],
-  ["Vitals, deterministically", "Blood pressure, heart rate, respiratory rate, SpO2, temperature and pain scores are read by rules and checked against reference bands."],
-  ["Gap detection", "The draft lists what the conversation did not cover, such as a missing pain score or patient response, instead of filling it in."],
-  ["Review and verify", "Edit any line, then verify the note. Changing a verified note returns it to draft."],
-  ["I-PASS shift handoff (Pro)", "Select verified notes and assemble an I-PASS handoff using only what those notes contain."],
-  ["Copy and print", "Export a clean note to paste into your charting system or print it."],
+  ["Conversation capture", "Dictate with the browser's built-in speech recognition or paste a transcript. Audio is never stored. Only the submitted text is saved."],
+  ["Structured drafting", "The AI engine analyzes the encounter and drafts SOAP, SBAR, DAR or a shift narrative. Sections with no evidence stay empty."],
+  ["Linked sources", "Every line cites a quote from the transcript. The platform verifies each quote in code and flags any line without a real match."],
+  ["Deterministic vitals", "Blood pressure, heart rate, respiratory rate, SpO2, temperature and pain scores are extracted by rules and compared with reference bands."],
+  ["Gap detection", "The engine lists what the encounter did not cover, such as a missing pain score or patient response, instead of inventing it."],
+  ["Nurse verification", "Each note is edited and verified by a nurse. Changing a verified note returns it to draft, preserving an honest audit trail."],
+  ["I-PASS handoff automation", "On the Pro plan, the engine synthesizes verified notes into an I-PASS handoff using only the content those notes contain."],
+  ["Usage control", "Plan limits and usage are enforced server-side and visible to the account owner at all times."],
 ];
 
 export default function ProductPage() {
   return (
     <Shell>
-      <PageHero eyebrow="Product" title="One workflow from conversation to verified note.">
-        NoteNurse is a focused documentation workspace: capture, draft, trace, verify.
+      <PageHero eyebrow="Platform" title="One AI pipeline from conversation to verified note.">
+        Capture, draft, trace and verify, with a nurse in control of every record.
       </PageHero>
       <section className="container-x grid gap-px py-20 sm:grid-cols-2">
         {modules.map(([t, d], i) => (
@@ -33,7 +33,7 @@ export default function ProductPage() {
       </section>
       <section className="bg-mist">
         <div className="container-x py-20">
-          <p className="eyebrow">Note formats</p>
+          <p className="eyebrow">Supported formats</p>
           <div className="mt-8 grid gap-5 md:grid-cols-4">
             {Object.values(FORMATS).map((f) => (
               <div key={f.id} className="card p-6">
@@ -43,7 +43,7 @@ export default function ProductPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12"><Link href="/signup" className="btn-primary">Start free trial</Link></div>
+          <div className="mt-12"><Link href="/signup" className="btn-primary">Sign up</Link></div>
         </div>
       </section>
     </Shell>

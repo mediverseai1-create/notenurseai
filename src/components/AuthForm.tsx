@@ -9,7 +9,7 @@ type Mode = "login" | "signup" | "forgot" | "reset";
 
 const copy: Record<Mode, { title: string; cta: string }> = {
   login: { title: "Welcome back", cta: "Log in" },
-  signup: { title: "Start your free trial", cta: "Create account" },
+  signup: { title: "Create your account", cta: "Create account" },
   forgot: { title: "Reset your password", cta: "Send reset link" },
   reset: { title: "Choose a new password", cta: "Update password" },
 };
@@ -33,7 +33,7 @@ function Form({ mode }: { mode: Mode }) {
     if ((mode === "signup" || mode === "reset") && password.length < 8) return setError("Password must be at least 8 characters.");
     setBusy(true);
     const supabase = createClient();
-    const origin = window.location.origin;
+    const origin = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin;
     try {
       if (mode === "login") {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
@@ -76,15 +76,15 @@ function Form({ mode }: { mode: Mode }) {
         <Logo dark />
         <div>
           <p className="eyebrow !text-signal">NoteNurse AI</p>
-          <p className="mt-4 max-w-md text-4xl font-medium leading-tight tracking-tight">Every line traced to what was actually said.</p>
+          <p className="mt-4 max-w-md text-4xl font-medium leading-tight tracking-tight">AI that documents with evidence, not assumptions.</p>
         </div>
-        <p className="text-sm text-white/50">Drafts are for licensed nurses to review and verify.</p>
+        <p className="text-sm text-white/50">Every draft is reviewed and verified by a licensed nurse.</p>
       </div>
       <div className="flex items-center justify-center p-6">
         <div className="w-full max-w-sm">
           <div className="mb-8 lg:hidden"><Logo /></div>
           <h1 className="text-3xl font-medium tracking-tight">{copy[mode].title}</h1>
-          <form onSubmit={onSubmit} className="mt-8 space-y-4" noValidate>
+          <form onSubmit={onSubmit} method="post" action="#" className="mt-8 space-y-4" noValidate>
             {mode === "signup" && (
               <div><label className="label" htmlFor="name">Full name</label><input id="name" name="name" className="field" autoComplete="name" required /></div>
             )}
